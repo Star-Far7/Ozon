@@ -10,5 +10,11 @@ const getCart = () => {
   cartClose.addEventListener("click", () => {
     cartModal.style.display = "";
   });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      cartModal.style.display = "";
+    }
+  });
 };
-getCart();
+export default getCart;
